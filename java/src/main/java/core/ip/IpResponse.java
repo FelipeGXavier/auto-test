@@ -31,6 +31,26 @@ public class IpResponse {
                 && longitude.equals(that.longitude);
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public String getContinent() {
+        return continent;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(city, continent, country, latitude, longitude);

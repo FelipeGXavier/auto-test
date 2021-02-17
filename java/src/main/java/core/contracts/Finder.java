@@ -1,6 +1,9 @@
 package core.contracts;
 
+import java.io.IOException;
+import java.util.Optional;
+
 public interface Finder<I, O> {
 
-    O find(I input);
+    Optional<O> find(I input) throws IOException, InterruptedException;
 }

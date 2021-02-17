@@ -1,4 +1,4 @@
-package unit;
+package integration;
 
 import core.contracts.Client;
 import core.network.NetworkClient;
