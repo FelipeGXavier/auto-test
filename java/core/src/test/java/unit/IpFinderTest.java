@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InOrder;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -18,21 +19,31 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class IpFinderTest {
 
-    @Mock private Client networkClient;
-    @Mock private IP ip;
+    @Mock
+    private Client networkClient;
+    @Mock
+    private IP ip;
 
     @Test
     @DisplayName("Test response given valid response payload")
     public void testValidValidationIpFinder() throws IOException, InterruptedException {
         var ipFinder = new IpFinder(this.networkClient);
+        // Set mocks
         when(this.networkClient.get(anyString())).thenReturn(this.validResponsePayload());
         when(this.networkClient.status()).thenReturn(200);
         Optional<IpResponse> response = ipFinder.find(this.ip);
+        // Check if status was executed
+        verify(this.networkClient, times(1)).status();
+        // Verify execution order
+        InOrder inOrder = Mockito.inOrder(this.networkClient);
+        inOrder.verify(this.networkClient).get(anyString());
+        inOrder.verify(this.networkClient).status();
+        // Assertions
         assertTrue(response.isPresent());
         var ipResponse = response.get();
         assertEquals("São Paulo", ipResponse.getCity());
