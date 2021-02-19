@@ -1,4 +1,4 @@
-package core.contracts;
+package core.ip;
 
 import java.io.IOException;
 

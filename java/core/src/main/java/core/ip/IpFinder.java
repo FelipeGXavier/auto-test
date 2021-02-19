@@ -1,9 +1,6 @@
 package core.ip;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import core.contracts.Client;
-import core.contracts.Finder;
-import core.network.NetworkClient;
 
 import java.io.IOException;
 import java.util.Optional;

@@ -1,6 +1,6 @@
 package core.network;
 
-import core.contracts.Client;
+import core.ip.Client;
 
 import java.io.IOException;
 import java.net.URI;

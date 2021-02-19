@@ -1,10 +1,9 @@
 package integration;
 
-import core.contracts.Client;
+import core.ip.Client;
 import core.ip.IP;
 import core.ip.IpFinder;
 import core.network.NetworkClient;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

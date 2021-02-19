@@ -1,11 +1,9 @@
 package unit;
 
-import core.contracts.Client;
+import core.ip.Client;
 import core.ip.IP;
 import core.ip.IpFinder;
 import core.ip.IpResponse;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -10,8 +10,7 @@ import org.mockito.Mockito;
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 public class DataWriterTest {
 
@@ -20,9 +19,10 @@ public class DataWriterTest {
     public void testDataWriterBehaviour() throws IOException {
         var file = Util.createTempFile("txt");
         Writer writer = DataWriter.of(file);
-        Writer spy = Mockito.spy(writer);
-        spy.append("Hello").append("World");
-        verify(spy, times(2)).flush();
+        Writer spyWriter = spy(writer);
+        spyWriter.append("Hello").append("World");
+        spyWriter.finish();
+        verify(spyWriter, times(2)).flush();
         assertNotNull(file);
         Util.removeTempFile(file.getPath());
     }
