@@ -1,6 +1,7 @@
 package core.ip;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import core.network.Client;
 
 import java.io.IOException;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package core.ip;
+package core.network;
 
 import java.io.IOException;
 

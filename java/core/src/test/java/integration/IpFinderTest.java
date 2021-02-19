@@ -1,6 +1,6 @@
 package integration;
 
-import core.ip.Client;
+import core.network.Client;
 import core.ip.IP;
 import core.ip.IpFinder;
 import core.network.NetworkClient;
