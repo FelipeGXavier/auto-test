@@ -1,8 +1,8 @@
 package integration;
 
-import core.network.Client;
 import core.ip.IP;
 import core.ip.IpFinder;
+import core.network.Client;
 import core.network.NetworkClient;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;

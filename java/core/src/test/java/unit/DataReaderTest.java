@@ -1,8 +1,8 @@
 package unit;
 
-import core.io.Reader;
+import core.Util;
 import core.io.DataReader;
-import core.io.Util;
+import core.io.Reader;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

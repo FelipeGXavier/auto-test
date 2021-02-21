@@ -1,11 +1,10 @@
 package unit;
 
+import core.Util;
 import core.io.DataWriter;
-import core.io.Util;
 import core.io.Writer;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 import java.io.IOException;
 

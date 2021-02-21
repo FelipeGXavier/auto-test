@@ -1,6 +1,9 @@
 package core.io;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class DataReader implements Reader {
 
@@ -12,6 +15,7 @@ public class DataReader implements Reader {
         String line;
         while ((line = reader.readLine()) != null) {
             result.append(line);
+            result.append("\n");
         }
         return result.toString();
     }

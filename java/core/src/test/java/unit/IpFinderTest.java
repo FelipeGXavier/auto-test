@@ -1,9 +1,9 @@
 package unit;
 
-import core.network.Client;
 import core.ip.IP;
 import core.ip.IpFinder;
 import core.ip.IpResponse;
+import core.network.Client;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

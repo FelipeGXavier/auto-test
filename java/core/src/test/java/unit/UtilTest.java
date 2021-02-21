@@ -1,6 +1,6 @@
 package unit;
 
-import core.io.Util;
+import core.Util;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
